@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { CountdownPopup } from './components/CountdownPopup';
 import { BenefitCard } from './components/BenefitCard';
 import { TestimonialCard } from './components/TestimonialCard';
-import { WhatsappIcon, NoDietIcon, NoExerciseIcon, FastResultsIcon, NaturalIcon } from './components/Icons';
+import { WhatsappIcon, NoDietIcon, NoExerciseIcon, FastResultsIcon, NaturalIcon, CheckIcon } from './components/Icons';
 
 const WHATSAPP_LINK = "whatsapp://send?phone=5517981597877&text=Ol%C3%A1,%20quero%20entrar%20no%20grupo!";
 
@@ -57,6 +57,21 @@ const App: React.FC = () => {
     }
   ];
 
+  const productEffects = [
+    "Diminui o peso e a obesidade",
+    "Controla o ressecamento",
+    "Previne e trata hemorróidas",
+    "Tem ação diurética e laxante",
+    "Não deixa flacidez no corpo",
+    "Elimina gordura visceral",
+    "Acelera o metabolismo",
+    "Combate a celulite",
+    "Reduz o apetite",
+    "Reduz a ansiedade",
+    "Reduz inchaço",
+    "Regula o intestino"
+  ];
+
   const testimonials = [
     {
       quote: "Nunca imaginei que seria tão fácil perder peso. Já tinha tentado de tudo! Em menos de 2 meses, eliminei 12kg e recuperei minha autoestima. Super recomendo!",
@@ -80,6 +95,15 @@ const App: React.FC = () => {
 
   return (
     <div className="bg-gray-900 text-white font-['Poppins']">
+      {/* Transparency Banner */}
+      <div className="sticky top-0 z-50 bg-gray-100 text-gray-800 text-xs sm:text-sm text-center p-2 shadow-md">
+        <div className="container mx-auto flex flex-wrap justify-center items-center gap-x-4 gap-y-1">
+          <span>🌿 <strong>Magroo Distribuidora</strong> - CNPJ: 60.881.982/0001-08</span>
+          <span className="hidden sm:inline">|</span>
+          <span><strong>GrãoKiseca®</strong> | Tratamentos a partir de R$ 197,00</span>
+        </div>
+      </div>
+
       <main>
         {/* Hero Section */}
         <section className="min-h-screen flex items-center justify-center p-4 md:p-8 bg-cover bg-center" style={{backgroundImage: "linear-gradient(rgba(16, 24, 40, 0.8), rgba(16, 24, 40, 0.9)), url(https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop)"}}>
@@ -107,7 +131,7 @@ const App: React.FC = () => {
         {/* Benefits Section */}
         <section className="py-16 md:py-24 bg-gray-900">
           <div className="container mx-auto max-w-6xl px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12">Por Que Nosso Método é <span className="text-emerald-500">Infálível?</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-12">Por Que Nosso Método é <span className="text-emerald-500">Infálivel?</span></h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <BenefitCard key={index} icon={benefit.icon} title={benefit.title} description={benefit.description} />
@@ -116,8 +140,25 @@ const App: React.FC = () => {
           </div>
         </section>
 
-        {/* Testimonials Section */}
+        {/* Product Effects Section */}
         <section className="py-16 md:py-24 bg-gray-800">
+          <div className="container mx-auto max-w-6xl px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12">
+              Transforme Seu Corpo Com Efeitos <span className="text-emerald-500">Reais e Comprovados</span>
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4 text-left max-w-4xl mx-auto">
+              {productEffects.map((effect, index) => (
+                <div key={index} className="flex items-center">
+                  <CheckIcon />
+                  <span className="text-gray-300">{effect}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-16 md:py-24 bg-gray-900">
           <div className="container mx-auto max-w-6xl px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-12">Veja Quem Já <span className="text-emerald-500">Transformou o Corpo</span></h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -144,12 +185,32 @@ const App: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 py-8 text-center text-gray-500">
-        <div className="container mx-auto px-4">
-          <p className="text-sm">&copy; 2024 Emagrecedor VIP. Todos os direitos reservados.</p>
-          <p className="text-xs mt-2 max-w-3xl mx-auto">
-            Disclaimer: Este produto não garante a obtenção de resultados. Qualquer referência ao desempenho de uma estratégia não deve ser interpretada como uma garantia de resultados. Os resultados podem variar de pessoa para pessoa.
-          </p>
+      <footer className="bg-gray-900 py-10 text-center text-gray-400">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="mb-6">
+            <h3 className="font-bold text-lg text-white mb-2">Magroo Distribuidora</h3>
+            <p className="text-sm">CNPJ: 60.881.982/0001-08</p>
+            <p className="text-sm">Rua Bocaína, 439, Potengi - Natal/RN</p>
+            <p className="text-sm mt-2">
+              <strong>Contato:</strong> (84) 99622-4700 | <a href="mailto:graokiseca2023@gmail.com" className="hover:text-emerald-400">graokiseca2023@gmail.com</a>
+            </p>
+          </div>
+
+          <div className="mb-6 text-xs text-gray-500 max-w-3xl mx-auto">
+            <p>
+              "Este produto não é um medicamento. O uso deste produto está condicionado a uma alimentação equilibrada e hábitos saudáveis. Os resultados podem variar de pessoa para pessoa. Não exceder a recomendação diária de consumo indicada na embalagem."
+            </p>
+            <p className="mt-2">
+              Disclaimer: Este produto não garante a obtenção de resultados. Qualquer referência ao desempenho de uma estratégia não deve ser interpretada como uma garantia de resultados.
+            </p>
+          </div>
+          
+          <div className="flex justify-center gap-6 mb-4">
+            <a href="#" className="text-sm hover:text-white">Política de Privacidade</a>
+            <a href="#" className="text-sm hover:text-white">Termos de Uso</a>
+          </div>
+
+          <p className="text-xs text-gray-600">&copy; 2024 Magroo Distribuidora. Todos os direitos reservados.</p>
         </div>
       </footer>
 
