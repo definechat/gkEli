@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect } from 'react';
 import { CountdownPopup } from './components/CountdownPopup';
 import { BenefitCard } from './components/BenefitCard';
@@ -116,6 +117,15 @@ const App: React.FC = () => {
               <p className="text-gray-300 text-lg md:text-xl mb-8">
                 Descubra o 'grão milagroso' que está revolucionando a perda de peso. Mais potente que capsulas e injeçoes famosas, porém 100% natural e seguro.
               </p>
+
+              <div className="my-8 text-center md:text-left">
+                  <span className="text-2xl text-gray-400 line-through">De R$227</span>
+                  <p className="text-4xl font-extrabold text-yellow-300">
+                    Por apenas R$197
+                  </p>
+                  <p className="text-emerald-400 font-semibold mt-1">Oferta Exclusiva para o Grupo VIP!</p>
+              </div>
+
               <a href={WHATSAPP_LINK} className="inline-flex items-center justify-center w-full md:w-auto px-10 py-5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xl rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
                 <WhatsappIcon />
                 <span className="ml-3">ENTRE NO GRUPO VIP</span>
