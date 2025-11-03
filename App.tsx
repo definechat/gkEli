@@ -82,7 +82,7 @@ const App: React.FC = () => {
     <div className="bg-gray-900 text-white font-['Poppins']">
       <main>
         {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center p-4 md:p-8 bg-cover bg-center" style={{backgroundImage: "linear-gradient(rgba(16, 24, 40, 0.8), rgba(16, 24, 40, 0.9)), url(https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=2070&auto=format&fit=crop)"}}>
+        <section className="min-h-screen flex items-center justify-center p-4 md:p-8 bg-cover bg-center" style={{backgroundImage: "linear-gradient(rgba(16, 24, 40, 0.8), rgba(16, 24, 40, 0.9)), url(https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop)"}}>
           <div className="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="text-center md:text-left animate-fade-in-down">
               <span className="text-emerald-400 font-semibold uppercase tracking-widest text-sm">suplemento natural</span>
